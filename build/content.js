@@ -13,6 +13,7 @@ module.exports = {
       sub: "From design and engineering to execution, delivery and maintenance.",
       location: "Jeddah  ·  Kingdom of Saudi Arabia",
       web: "www.nvi-sa.com",
+      lines: "Engineering  ·  Contracting  ·  Fit-Out  ·  MEP  ·  Facility Maintenance",
     },
     about: {
       eyebrow: "01  ·  Who we are",
@@ -207,7 +208,7 @@ module.exports = {
       sub: "A selection of the clients we have delivered for.",
       label: "Client",
       list: [
-        ["DUKAN", ""],
+        ["DUKAN", "Dabbagh Group"],
         ["PANDA", "Savola Group"],
         ["MAZDA", "Haji Husein Alireza & Co. Ltd."],
       ],
@@ -235,9 +236,10 @@ module.exports = {
       sub: "New Vision Integral for Maintenance & Contracting  ·  Jeddah, Kingdom of Saudi Arabia",
       people: [
         ["General Manager", "Azzam Al Sayeh", "a.alsayeh@nvi-sa.com", "+966 50 597 6970"],
-        ["Sales Manager", "Abdulhai Hambrouch", "a.ahmed@nvi-sa.com", "+966 55 069 6190"],
+        ["Managing Director", "Abdulhai Hambrouch", "a.ahmed@nvi-sa.com", "+966 55 069 6190"],
       ],
       webLabel: "Online",
+      waLabel: "WhatsApp",
       web: "www.nvi-sa.com",
     },
   },
@@ -252,6 +254,7 @@ module.exports = {
       sub: "من التصميم والهندسة إلى التنفيذ والتسليم والصيانة.",
       location: "جدة  ·  المملكة العربية السعودية",
       web: "www.nvi-sa.com",
+      lines: "الهندسة  ·  المقاولات  ·  التجهيز  ·  الأعمال الكهروميكانيكية  ·  صيانة المرافق",
     },
     about: {
       eyebrow: "01  ·  من نحن",
@@ -443,7 +446,7 @@ module.exports = {
       sub: "مجموعة مختارة من العملاء الذين نفذنا لهم أعمالنا.",
       label: "عميل",
       list: [
-        ["DUKAN", "دكان"],
+        ["DUKAN", "دكان  ·  مجموعة الدباغ"],
         ["PANDA", "بنده  ·  مجموعة صافولا"],
         ["MAZDA", "مازدا  ·  شركة الحاج حسين علي رضا وشركاه المحدودة"],
       ],
@@ -471,9 +474,10 @@ module.exports = {
       sub: "الرؤية الجديدة التكاملية للصيانة والمقاولات  ·  جدة، المملكة العربية السعودية",
       people: [
         ["المدير العام", "عزام الصايح", "a.alsayeh@nvi-sa.com", "+966 50 597 6970"],
-        ["مدير المبيعات", "عبد الحي حمبروش", "a.ahmed@nvi-sa.com", "+966 55 069 6190"],
+        ["العضو المنتدب", "عبد الحي حمبروش", "a.ahmed@nvi-sa.com", "+966 55 069 6190"],
       ],
       webLabel: "الموقع الإلكتروني",
+      waLabel: "واتساب",
       web: "www.nvi-sa.com",
     },
   },
