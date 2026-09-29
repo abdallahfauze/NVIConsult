@@ -2,8 +2,8 @@
 // (light theme): Cinzel section titles, Century Gothic body, Bahnschrift
 // sub-heads, Consolas numerals/labels, #F2F2F2 pages, thin rules.
 //
-//   node build/build.js en   -> NVIMC Company Profile (EN).pptx
-//   node build/build.js ar   -> NVIMC Company Profile (AR).pptx  (mirrored, right-to-left)
+//   node build/build.js en   -> NVIMC Company Profile - Minimal (EN).pptx
+//   node build/build.js ar   -> NVIMC Company Profile - Minimal (AR).pptx  (mirrored, right-to-left)
 // Run build/prep_images.py first to populate build/assets/.
 
 const path = require("path");
@@ -378,7 +378,6 @@ function build() {
       });
       const wa = `https://wa.me/${tel.replace(/\D/g, "")}`;
       s.addText([
-        { text: `${c.waLabel}  `, options: { fontFace: RTL ? F.ar : F.mono, fontSize: 9, color: C.muted, charSpacing: RTL ? 0 : 2, hyperlink: { url: wa } } },
         { text: tel, options: { fontFace: F.body, fontSize: 11.5, color: C.accent, hyperlink: { url: wa } } },
       ], { x: mx(cx, cw), y: 5.02, w: cw, h: 0.3, margin: 0, align: "center", valign: "middle", isTextBox: true, ...(RTL ? { rtlMode: true } : {}) });
     });
@@ -388,7 +387,7 @@ function build() {
     footer(s, n);
   }
 
-  const name = `NVIMC Company Profile (${LANG.toUpperCase()}).pptx`;
+  const name = `NVIMC Company Profile - Minimal (${LANG.toUpperCase()}).pptx`;
   return pres.writeFile({ fileName: path.join(OUT_DIR, name) }).then(() => console.log("wrote", name, "slides:", n));
 }
 

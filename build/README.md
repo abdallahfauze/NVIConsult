@@ -1,29 +1,33 @@
 # Company profile build
 
-Generates the redesigned NVIMC company profile in English and Arabic from the
-original V1 deck's imagery.
+Generates the NVIMC company profile in two themes, each in English and Arabic
+(the Arabic decks are the same layouts mirrored right-to-left):
+
+| Theme | Script | Assets | Output |
+|---|---|---|---|
+| Minimal (portfolio-deck light) | `build.js` | `prep_images.py` → `assets/` | `NVIMC Company Profile - Minimal (EN/AR).pptx` |
+| Bold (dark/colour, logo palette) | `build_bold.js` | `prep_bold.py` → `assets_bold/` | `NVIMC Company Profile - Bold (EN/AR).pptx` |
+
+Both themes read the same `content.js`, so every line of copy is identical.
 
 ```bash
-# 1. unzip the original deck and prepare images (crops, logo cut-outs, portraits)
+# 1. unzip the original deck and prepare images
 python3 -c "import zipfile; zipfile.ZipFile('Company Profile NVIMC V1.pptx').extractall('/tmp/v1')"
 python3 build/prep_images.py /tmp/v1
+python3 build/prep_bold.py /tmp/v1
 
-# 2. build both decks
+# 2. build all four decks
 cd build && npm install && cd ..
-node build/build.js en
-node build/build.js ar
+for l in en ar; do node build/build.js $l; node build/build_bold.js $l; done
 ```
-
-- `content.js` holds every line of copy (EN + AR), so wording changes don't touch layout.
-- `build.js` holds the layout; the Arabic deck is the same layout mirrored right-to-left.
 
 ## Fonts
 
-The decks follow the portfolio deck's typography: **Cinzel** (section titles),
+Both themes follow the portfolio deck's typography: **Cinzel** (titles),
 **Century Gothic** (body), **Bahnschrift** (sub-heads) and **Consolas**
 (numerals, labels). Century Gothic, Bahnschrift and Consolas ship with
 Windows/Office; Cinzel is a free Google Font and must be installed on any
-machine that edits or presents the deck. Arabic text uses **Segoe UI**.
+machine that edits or presents the decks. Arabic text uses **Segoe UI**.
 
 Export PDFs from PowerPoint on a machine with these fonts installed so the
-PDF matches the design exactly.
+PDFs match the design exactly.
